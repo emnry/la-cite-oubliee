@@ -190,3 +190,11 @@ lieu lier <lieu1> <lieu2>
 
 * Ajouter lieu sur la carte : `carte + <x> <y> <initiale lieu>`
 * Modifier case : `carte - <x> <y>`
+
+---
+
+## Crédits
+
+**Auteur :** [emnry](https://github.com/emnry)
+
+---
