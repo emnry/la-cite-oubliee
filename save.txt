@@ -1,0 +1,84 @@
+OBJETS
+Nom: torche
+Description: elle pourrait servir d'un eclairage
+Valeur: 10
+
+Nom: dague
+Description: personne n'en veut elle est trop coupante
+Valeur: 30
+
+Nom: pierre
+Description: un simple caillou mais qui brille
+Valeur: 40
+
+Nom: epee
+Description: une epee de pierre qui pourrait servir en cas d'attaque
+Valeur: 90
+
+Nom: bague
+Description: bague brillante
+Valeur: 10
+
+PNJS
+Nom: homme
+Dialogue: salut, aurait tu un beau caillou ?
+Type: 0
+Attaque: 0
+Vie: 0
+Objet: epee
+Condition: pierre
+
+Nom: mage
+Dialogue: qui est tu ? Va t'en ou je ne te laisserait pas partir vivant.
+Type: 1
+Attaque: 10
+Vie: 70
+Objet: bague
+Condition: NULL
+
+LIEUX
+Nom: village
+Preposition: au
+Description: un village, on y trouve un marche et des caisses d'armes
+Atteignables: grotte
+Condition: NULL
+Inventaire: dague, torche
+NPC: NULL
+
+Nom: grotte
+Preposition: a la
+Description: une grotte sombre et mysterieuse
+Atteignables: village, foret
+Condition: torche
+Inventaire: pierre
+NPC: NULL
+
+Nom: foret
+Preposition: a la
+Description: foret de sapin ou une hermite s'abrite
+Atteignables: grotte, chateau
+Condition: NULL
+Inventaire: NULL
+NPC: homme
+
+Nom: chateau
+Preposition: au
+Description: un grand chateau noir ou se trouve un grand mage agressif
+Atteignables: foret, place
+Condition: NULL
+Inventaire: NULL
+NPC: mage
+
+Nom: place
+Preposition: a la
+Description: place du village voisin, beaucoup de villageois s'y trouvent
+Atteignables: chateau
+Condition: NULL
+Inventaire: NULL
+NPC: NULL
+
+
+JOUEUR
+Nom: user
+LieuActuel: village
+Inventaire: NULL
